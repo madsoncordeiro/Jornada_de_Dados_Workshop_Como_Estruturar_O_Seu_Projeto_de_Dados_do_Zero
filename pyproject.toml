@@ -6,14 +6,15 @@ authors = [
     {name = "Madson Cordeiro",email = "e-mail@email.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<4.0"
 dependencies = [
     "pandas (>=3.0.2,<4.0.0)",
     "openpyxl (>=3.1.5,<4.0.0)",
     "pytest (>=9.0.3,<10.0.0)",
     "requests (>=2.33.1,<3.0.0)",
     "isort (>=8.0.1,<9.0.0)",
-    "blue (>=0.9.1,<0.10.0)"
+    "blue (>=0.9.1,<0.10.0)",
+    "taskipy (>=1.14.1,<2.0.0)"
 ]
 
 
@@ -24,3 +25,6 @@ build-backend = "poetry.core.masonry.api"
 [tool.isort]
 profile = "black"
 known_third_party = []
+
+[tool.taskipy.tasks]
+format = "isort . && blue ."
