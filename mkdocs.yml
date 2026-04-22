@@ -1,0 +1,20 @@
+site_name: Workshop Como Estruturar o Seu Projeto de Dados do Zero (Jornada de Dados)
+theme:
+  name: material
+  palette:
+    primary: red
+  language: pt
+
+repo_name: "madsoncordeiro/Jornada_de_Dados_Workshop_Como_Estruturar_O_Seu_Projeto_de_Dados_do_Zero"
+repo_url: "https://github.com/madsoncordeiro/Jornada_de_Dados_Workshop_Como_Estruturar_O_Seu_Projeto_de_Dados_do_Zero"
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
