@@ -5,17 +5,19 @@ import pandas as pd # Biblioteca para manipulação de dados
 
 from typing import List # Biblioteca para tipagem de listas
 
-"""
-Função para ler os arquivos de uma pasta data/input e retornar uma lista de DataFrames
 
-args: input_path (str): caminho da pasta com os arquivos
-
-return: lista de DataFrames
-"""
 
 path = "data/input"
 
 def extract_from_excel(path: str) -> List[pd.DataFrame]:
+    """
+    Função para ler os arquivos de uma pasta data/input e retornar uma lista de DataFrames
+
+    args: input_path (str): caminho da pasta com os arquivos
+
+    return: lista de DataFrames
+    """
+    
     all_files = glob.glob(os.path.join(path, "*.xlsx"))
     
     data_frame_list = []
