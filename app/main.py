@@ -6,3 +6,4 @@ if __name__ == "__main__":
     data_frame = transform.concatenate_data_frames(data_frame_list)
     print(type(data_frame))
     load.load_excel(data_frame, "data/output", "output")
+    print("Processo concluído com sucesso. ")
