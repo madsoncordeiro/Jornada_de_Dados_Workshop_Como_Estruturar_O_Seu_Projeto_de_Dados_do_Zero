@@ -4,7 +4,7 @@ from typing import List  # Biblioteca para tipagem de listas
 
 import pandas as pd  # Biblioteca para manipulação de dados
 
-path = 'data/input'
+path = "data/input"
 
 
 def extract_from_excel(path: str) -> List[pd.DataFrame]:
@@ -16,7 +16,7 @@ def extract_from_excel(path: str) -> List[pd.DataFrame]:
     return: lista de DataFrames
     """
 
-    all_files = glob.glob(os.path.join(path, '*.xlsx'))
+    all_files = glob.glob(os.path.join(path, "*.xlsx"))
 
     data_frame_list = []
 
@@ -27,6 +27,6 @@ def extract_from_excel(path: str) -> List[pd.DataFrame]:
 
 
 # Criando uma variável que vai comportar todas essas listas, está chamando a função criada e passando o path
-if __name__ == '__main__':
+if __name__ == "__main__":
     data_frame_list = extract_from_excel(path)
     print(data_frame_list)
